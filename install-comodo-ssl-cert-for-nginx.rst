@@ -2,7 +2,7 @@ Setting up a SSL Cert from Comodo
 =================================
 
 I use `Namecheap.com <https://namecheap.com>`_ as a registrar, and they resale
-SSL Certs from a number of other companies, including `Comodo <http://www.comodo.com/>`.
+SSL Certs from a number of other companies, including `Comodo <http://www.comodo.com/>`_.
 
 These are the steps I went through to set up an SSL cert.
 
@@ -22,7 +22,7 @@ This gives you two files:
     * ``example_com.key`` -- your Private key. You'll need this later to configure ngxin.
     * ``example_com.csr`` -- Your CSR file.
 
-Now, purchase the certificate[1]_, wait *forever* for them to review your purchase.
+Now, purchase the certificate [1]_, wait *forever* for them to review your purchase.
 You'll eventually get an email with your *PositiveSSL Certificate*. It contains
 a zip file with the following:
 
@@ -33,7 +33,7 @@ a zip file with the following:
 Install the Commodo SSL cert
 ----------------------------
 
-Combine everything for nxinx[2]_:
+Combine everything for nxinx [2]_:
 
 1. Combine the above crt files into a bundle (the order matters, here)::
 
