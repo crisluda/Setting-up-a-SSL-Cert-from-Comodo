@@ -19,16 +19,16 @@ when ordering the certificate.
 
 This gives you two files:
 
-    * ``example_com.key`` -- your Private key. You'll need this later to configure ngxinx.
-    * ``example_com.csr`` -- Your CSR file.
+* ``example_com.key`` -- your Private key. You'll need this later to configure ngxinx.
+* ``example_com.csr`` -- Your CSR file.
 
 Now, purchase the certificate [1]_, follow the steps on their site, and you should soon get an 
 email with your *PositiveSSL Certificate*. It contains a zip file with the following:
 
-    * Root CA Certificate - `AddTrustExternalCARoot.crt`
-    * Intermediate CA Certificate - `COMODORSAAddTrustCA.crt`
-    * Intermediate CA Certificate - `COMODORSADomainValidationSecureServerCA.crt`
-    * Your PositiveSSL Certificate - `www_example_com.crt` (or the subdomain you gave them)
+* Root CA Certificate - `AddTrustExternalCARoot.crt`
+* Intermediate CA Certificate - `COMODORSAAddTrustCA.crt`
+* Intermediate CA Certificate - `COMODORSADomainValidationSecureServerCA.crt`
+* Your PositiveSSL Certificate - `www_example_com.crt` (or the subdomain you gave them)
 
 Install the Commodo SSL cert
 ----------------------------
@@ -44,7 +44,7 @@ Combine everything for nginx [2]_:
     mkdir -p /etc/nginx/ssl/example_com/
     mv ssl-bundle.crt /etc/nginx/ssl/example_com/
 
-3. Ensure your private key is somewhere nginx can read it, as well.
+3. Ensure your private key is somewhere nginx can read it, as well.::
 
     mv example_com.key /etc/nginx/ssl/example_com/
 
