@@ -26,8 +26,8 @@ Now, purchase the certificate [1]_, follow the steps on their site, and you shou
 email with your *PositiveSSL Certificate*. It contains a zip file with the following:
 
 * Root CA Certificate - `AddTrustExternalCARoot.crt`
-* Intermediate CA Certificate - `COMODORSAAddTrustCA.crt`
-* Intermediate CA Certificate - `COMODORSADomainValidationSecureServerCA.crt`
+* Intermediate CA Certificate - `USERTrustRSAAAACA.crt`
+* Intermediate CA Certificate - `SectigoRSADomainValidationSecureServerCA.crt`
 * Your PositiveSSL Certificate - `www_example_com.crt` (or the subdomain you gave them)
 
 Install the Commodo SSL cert
@@ -37,7 +37,7 @@ Combine everything for nginx [2]_:
 
 1. Combine the above crt files into a bundle (the order matters, here)::
 
-    cat www_example_com.crt COMODORSADomainValidationSecureServerCA.crt  COMODORSAAddTrustCA.crt AddTrustExternalCARoot.crt > ssl-bundle.crt
+    cat www_example_com.crt SectigoRSADomainValidationSecureServerCA.crt  USERTrustRSAAAACA.crt USERTrustRSAAAACA.crt > ssl-bundle.crt
 
 2. Store the bundle wherever nginx expects to find it::
 
